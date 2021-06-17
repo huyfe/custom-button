@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Btn</title>
+
+    <!-- Link My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <a class="button" id="button" href="#">Button</a>
+
+    <div class="wrapCode">
+        <pre id="inputCode">asdasdsd</pre>
+
+        <button id="copy">Copy to clipboard</button>
+    </div>
+    
+
+    <table>
+        <tr>
+            <td>Color</td>
+            <td><input id="color" type="color"></td>
+        </tr>
+        <tr>
+            <td>Background color</td>
+            <td><input id="bgColor" type="color"></td>
+        </tr>
+        <tr>
+            <td>Padding</td>
+            <td><input id="padding" value="0" type="range" min="0" max="50"></td>
+        </tr>
+        <tr>
+            <td>Border radius</td>
+            <td><input id="borderRadius" value="0" type="range" type="range" min="0" max="50"></td>
+        </tr>
+    </table>
+
+    <!-- Link Javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
