@@ -17,12 +17,14 @@ function parseCss() {
     // Input css
     let color = document.getElementById("color");
     let bgColor = document.getElementById("bgColor");
-    let padding = document.getElementById("padding");
+    let paddingX = document.getElementById("paddingX");
+    let paddingY = document.getElementById("paddingY");
     let borderRadius = document.getElementById("borderRadius");
 
     let codeColor = "";
     let codeBgColor = "";
-    let codePadding = "";
+    let codePaddingX = "";
+    let codePaddingY = "";
     let codeBorderRadius = "";
     let result = "";
 
@@ -33,7 +35,7 @@ function parseCss() {
         codeColor = `color: ${color.value};`;
         result = `${codeString}${codeColor}
     ${codeBgColor}
-    ${codePadding}
+    ${codePaddingX}
     ${codeBorderRadius}
 ${endCodeString}`;
 
@@ -46,7 +48,7 @@ ${endCodeString}`;
         codeBgColor = `background-color: ${bgColor.value};`;
         result = `${codeString}${codeColor}
     ${codeBgColor}
-    ${codePadding}
+    ${codePaddingX}
     ${codeBorderRadius}
 ${endCodeString}`;
 
@@ -55,17 +57,31 @@ ${endCodeString}`;
         button.style.backgroundColor = bgColor.value;
     })
 
-    padding.addEventListener("input", function() {
-        codePadding = `padding: ${padding.value}px;`;
+    paddingX.addEventListener("input", function() {
+        codePaddingX = `padding: ${paddingX.value}px ${paddingY.value}px;`;
         result = `${codeString}${codeColor}
     ${codeBgColor}
-    ${codePadding}
+    ${codePaddingX}
     ${codeBorderRadius}
 ${endCodeString}`;
 
         inputCode.innerHTML = result;
 
-        button.style.padding = padding.value + "px";
+        button.style.padding = paddingX.value + "px " + paddingY.value + "px";
+
+    })
+
+    paddingY.addEventListener("input", function() {
+        codePaddingX = `padding: ${paddingX.value}px ${paddingY.value}px;`;
+        result = `${codeString}${codeColor}
+    ${codeBgColor}
+    ${codePaddingX}
+    ${codeBorderRadius}
+${endCodeString}`;
+
+        inputCode.innerHTML = result;
+
+        button.style.padding = paddingX.value + "px " + paddingY.value + "px";
 
     })
 
@@ -73,7 +89,7 @@ ${endCodeString}`;
         codeBorderRadius = `border-radius: ${borderRadius.value}px;`;
         result = `${codeString}${codeColor}
     ${codeBgColor}
-    ${codePadding}
+    ${codePaddingX}
     ${codeBorderRadius}
 ${endCodeString}`;
 
