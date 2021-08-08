@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Btn</title>
-
+    <!-- Link Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Link My CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -19,43 +21,62 @@
 
 <body>
 
-    <button class="button" id="button">Button</button>
+    <div class="container ">
+        <div class="row justify-content-center ">
+            <div class="col-lg-6 align-self-center">
+                <div class=" control w-75 ml-auto">
+                    <h3>Custom button</h3>
+                    <table>
+                        <tr>
+                            <td>Color</td>
+                            <td><input id="color" value="#000000" name="color" type="color"></td>
+                        </tr>
+                        <tr>
+                            <td>Background color</td>
+                            <td><input id="bgColor" value="#ffffff" name="backgroundColor" type="color"></td>
+                        </tr>
+                        <tr>
+                            <td>Padding X</td>
+                            <td><input id="paddingX" name="paddingX" value="20" type="range" min="0" max="50"></td>
+                        </tr>
+                        <tr>
+                            <td>Padding Y</td>
+                            <td><input id="paddingY" name="paddingY" value="10" type="range" min="0" max="50"></td>
+                        </tr>
+                        <tr>
+                            <td>Border</td>
+                            <td>
+                                <input id="border" name="border" type="number" value="1" type="range" min="0" max="10">
+                                <input id="borderColor" type="color">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Border radius</td>
+                            <td><input id="borderRadius" name="borderRadius" value="5" type="range" type="range" min="0"
+                                    max="20">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="result text-center">
+                    <button class="button" id="button">Button</button>
+                    <div class="wrapCode">
+                        <textarea rows="11" cols="50" id="outputCode"></textarea>
 
-    <div class="wrapCode">
-        <pre id="outputCode"></pre>
-
-        <button id="copy">Copy to clipboard</button>
+                        <div class="tooltipp">
+                            <button id="copy" onclick="myFunction()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                Copy code
+                            </button>
+                        </div>
+                        <!-- <button type="text" id="copy" /> Copy to clipboard </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <table>
-        <tr>
-            <td>Color</td>
-            <td><input id="color" value="#000000" name="color" type="color"></td>
-        </tr>
-        <tr>
-            <td>Background color</td>
-            <td><input id="bgColor" value="#ffffff" name="backgroundColor" type="color"></td>
-        </tr>
-        <tr>
-            <td>Padding X</td>
-            <td><input id="paddingX" name="paddingX" value="0" type="range" min="0" max="50"></td>
-        </tr>
-        <tr>
-            <td>Padding Y</td>
-            <td><input id="paddingY" name="paddingY" value="0" type="range" min="0" max="50"></td>
-        </tr>
-        <tr>
-            <td>Border</td>
-            <td>
-                <input id="border" name="border" type="number" value="1" type="range" min="0" max="10">
-                <input id="borderColor" type="color">
-            </td>
-        </tr>
-        <tr>
-            <td>Border radius</td>
-            <td><input id="borderRadius" name="borderRadius" value="0" type="range" type="range" min="0" max="50"></td>
-        </tr>
-    </table>
 
     <footer class="footer">
         <ul>
@@ -72,7 +93,7 @@
                         style="color: #00AFF0;" class="fab fa-skype"></i></a>
             </li>
         </ul>
-        <span>Developed by Huy FE. <br>A gift for everybody. <i class="fas fa-gift"></i></span>
+        <span>Developed by Huy FE. <br>A gift for everybody <i class="fas fa-gift"></i></span>
     </footer>
     <!-- Link Javascript -->
     <script src="app.js"></script>

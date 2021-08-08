@@ -12,16 +12,16 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: #eee;
+    background-color: rgb(253, 253, 253);
 }
 .footer {
     width: 15%;
-    margin-top: 20px;
+    margin-top: 60px;
     text-align: center;
 }
 .footer span {
     font-style: italic;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
     display: block;
 }
@@ -31,25 +31,27 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
 .footer ul li a i {
     font-size: 38px;
 }
 
-.wrapCode {
+.result {
+    position: relative;
+}
+textarea {
+    width: 100%;
     margin-bottom: 20px;
-    width: 300px;
     min-height: 200px;
     background-color: rgb(0, 0, 51);
-
+    text-align: left;
     border-radius: 10px;
     padding: 30px;
 
     position: relative;
 
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.wrapCode pre {
-    color: #fff;
+    color: #eee;
 }
 
 .button {
@@ -61,11 +63,13 @@ body {
 
 table tr td {
     padding: 10px;
+    padding-left: 0;
 }
 
 #copy {
+    width: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
 
     padding: 10px 10px;
@@ -89,4 +93,37 @@ table tr td {
     .footer span {
         font-size: 14px;
     }
+}
+
+.tooltipp .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.tooltipp .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltipp:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

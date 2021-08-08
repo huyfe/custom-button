@@ -22,7 +22,7 @@
         },
         {
             styleCss: "padding",
-            value: `${paddingX.value}px ${paddingY.value}px`
+            value: `${paddingY.value}px ${paddingX.value}px `
         },
         {
             styleCss: "border",
@@ -69,7 +69,7 @@
                 },
                 {
                     styleCss: "padding",
-                    value: `${paddingX.value}px ${paddingY.value}px`
+                    value: `${paddingY.value}px ${paddingX.value}px `
                 },
                 {
                     styleCss: "border",
@@ -94,7 +94,22 @@
         })
     }
     // Event click to copy code
-    document.querySelector("#copy").addEventListener("click", function () {
-        window.prompt("Copy to clipboard: Ctrl+C, Enter", outputCode.innerHTML);
-    })
+    // document.querySelector("#copy").addEventListener("click", function () {
+    //     window.prompt("Copy to clipboard: Ctrl+C, Enter", outputCode.innerHTML);
+    // })
 })();
+
+function myFunction() {
+    var copyText = document.getElementById("outputCode");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied";
+}
+
+function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+}
