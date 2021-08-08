@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,51 +16,60 @@
     <!-- Link Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
-    
-    <a class="button" id="button" href="#">Button</a>
+
+    <button class="button" id="button">Button</button>
 
     <div class="wrapCode">
-        <pre id="inputCode">asdasdsd</pre>
+        <pre id="outputCode"></pre>
 
         <button id="copy">Copy to clipboard</button>
     </div>
-    
 
     <table>
         <tr>
             <td>Color</td>
-            <td><input id="color" type="color"></td>
+            <td><input id="color" value="#000000" name="color" type="color"></td>
         </tr>
         <tr>
             <td>Background color</td>
-            <td><input id="bgColor" type="color"></td>
+            <td><input id="bgColor" value="#ffffff" name="backgroundColor" type="color"></td>
         </tr>
         <tr>
             <td>Padding X</td>
-            <td><input id="paddingX" value="0" type="range" min="0" max="50"></td>
+            <td><input id="paddingX" name="paddingX" value="0" type="range" min="0" max="50"></td>
         </tr>
         <tr>
             <td>Padding Y</td>
-            <td><input id="paddingY" value="0" type="range" min="0" max="50"></td>
+            <td><input id="paddingY" name="paddingY" value="0" type="range" min="0" max="50"></td>
+        </tr>
+        <tr>
+            <td>Border</td>
+            <td>
+                <input id="border" name="border" type="number" value="1" type="range" min="0" max="10">
+                <input id="borderColor" type="color">
+            </td>
         </tr>
         <tr>
             <td>Border radius</td>
-            <td><input id="borderRadius" value="0" type="range" type="range" min="0" max="50"></td>
+            <td><input id="borderRadius" name="borderRadius" value="0" type="range" type="range" min="0" max="50"></td>
         </tr>
     </table>
-
 
     <footer class="footer">
         <ul>
             <li>
-                <a href="https://www.facebook.com/ybx1802/" title="Trần Quốc Huy" target="_blank"><i style="color: #4267B2;" class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/ybx1802/" title="Trần Quốc Huy" target="_blank"><i
+                        style="color: #4267B2;" class="fab fa-facebook"></i></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/huy_jr18/" title="huy_jr18" target="_blank"><i style="color: #FD1D1D;" class="fab fa-instagram-square"></i></a>
+                <a href="https://www.instagram.com/huy_jr18/" title="huy_jr18" target="_blank"><i
+                        style="color: #FD1D1D;" class="fab fa-instagram-square"></i></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/huy_jr18/" title="kenbi.njr@gmail.com" target="_blank"><i style="color: #00AFF0;" class="fab fa-skype"></i></a>
+                <a href="https://www.instagram.com/huy_jr18/" title="kenbi.njr@gmail.com" target="_blank"><i
+                        style="color: #00AFF0;" class="fab fa-skype"></i></a>
             </li>
         </ul>
         <span>Developed by Huy FE. <br>A gift for everybody. <i class="fas fa-gift"></i></span>
@@ -67,4 +77,5 @@
     <!-- Link Javascript -->
     <script src="app.js"></script>
 </body>
+
 </html>
